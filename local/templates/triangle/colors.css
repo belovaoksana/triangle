@@ -61,9 +61,9 @@ div.catalog-item-property { border-color: #ccc;}
 div.catalog-item-property b, div.catalog-item-property span { background: white; }
 
 /* Top menu */
-#horizontal-multilevel-menu li a.root-item { color:#fff; }
+#horizontal-multilevel-menu li a.root-item { color:black;}
 #horizontal-multilevel-menu li a.root-item-selected { background:#47A7AA; color:#fff;} /*Root menu selected*/
-#horizontal-multilevel-menu li:hover a.root-item, #horizontal-multilevel-menu li.jshover a.root-item { background:#86CBCD; color:#fff; } /*Root items: hover*/
+#horizontal-multilevel-menu li:hover a.root-item, #horizontal-multilevel-menu li.jshover a.root-item { background:#86CBCD; color:black; } /*Root items: hover*/
 #horizontal-multilevel-menu li:hover, #horizontal-multilevel-menu li.jshover { background:#F7F2DB; color:#fff; } /*Child-items: hover*/
 #horizontal-multilevel-menu li.item-selected { background:#F7F2DB; color:#fff; } /*Child-items selected*/
 #horizontal-multilevel-menu li ul { background:#FFFAE2; border-color: #D6D2BE;}
@@ -97,8 +97,8 @@ div.content-form div.form-input input, div.content-form div.form-input textarea,
 	background: #F8F7F7;
 	border-color: #D9D9D9;
 }
-div.content-form div.field-error div.form-input input, 
-div.content-form div.field-error div.form-input textarea, 
+div.content-form div.field-error div.form-input input,
+div.content-form div.field-error div.form-input textarea,
 div.content-form div.field-error div.form-input select
 {
 	color: red;
@@ -114,5 +114,5 @@ div.search-advanced, div.search-item-meta, div.search-item-meta a { color: #8a8a
 div.search-sorting b { background: #E8E9EC; }
 
 /*Error & OK messages*/
-.errortext, .starrequired { color: red;}  
-.errortext, .notetext { background:#FFFEEB; border-color: #FFD482;} 
+.errortext, .starrequired { color: red;}
+.errortext, .notetext { background:#FFFEEB; border-color: #FFD482;}
