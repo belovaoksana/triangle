@@ -1,7 +1,7 @@
 
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("Отзывы");?>
+$APPLICATION->SetTitle("Отзывы наших клиентов");?>
 <div class="container">
     <?$APPLICATION->IncludeComponent(
     	"bitrix:news",
@@ -70,6 +70,7 @@ $APPLICATION->SetTitle("Отзывы");?>
     		"VARIABLE_ALIASES" => Array("ELEMENT_ID"=>"ELEMENT_ID","SECTION_ID"=>"SECTION_ID")
     	)
     );?>
+
+
 </div>
-<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");
-?>
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
