@@ -22,7 +22,9 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
        </div>
        <div class="preloader"><i class="fa fa-sun-o fa-spin"></i></div>
    </section>
+
    <div class="rev_list">
+       <h3>Отзывы наших клиентов</h3>
        <?$APPLICATION->IncludeComponent(
    	"bitrix:news.list",
    	"rev_list",
@@ -40,14 +42,14 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
    		"CACHE_TYPE" => "A",
    		"CHECK_DATES" => "Y",
    		"DETAIL_URL" => "",
-   		"DISPLAY_BOTTOM_PAGER" => "Y",
+   		"DISPLAY_BOTTOM_PAGER" => "N",
    		"DISPLAY_DATE" => "Y",
    		"DISPLAY_NAME" => "Y",
    		"DISPLAY_PICTURE" => "Y",
    		"DISPLAY_PREVIEW_TEXT" => "Y",
    		"DISPLAY_TOP_PAGER" => "N",
    		"FIELD_CODE" => array("",""),
-   		"FILTER_NAME" => ">=2",
+   		"FILTER_NAME" => "arrFilter",
    		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
    		"IBLOCK_ID" => "5",
    		"IBLOCK_TYPE" => "reviews",
@@ -61,7 +63,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
    		"PAGER_SHOW_ALL" => "N",
    		"PAGER_SHOW_ALWAYS" => "N",
    		"PAGER_TEMPLATE" => ".default",
-   		"PAGER_TITLE" => "Новости",
+   		"PAGER_TITLE" => "Отзывы",
    		"PARENT_SECTION" => "",
    		"PARENT_SECTION_CODE" => "",
    		"PREVIEW_TRUNCATE_LEN" => "",
@@ -80,6 +82,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
    		"STRICT_SECTION_CHECK" => "N"
    	)
    );?>
+   <a href="http://triangle.dev/company/reviews.php">Смотреть все отзывы</a>
 </div>
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

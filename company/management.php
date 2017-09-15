@@ -4,7 +4,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Наша команда");
 ?>
 <?$APPLICATION->IncludeComponent(
-	"bitrix:catalog",
+	"bitrix:catalog.element",
 	"sotrudniki",
 	Array(
 		"ACTION_VARIABLE" => "action",

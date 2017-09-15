@@ -11,6 +11,8 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
+// pre($arResult, 'arResult');
+// die();
 ?>
 <div class="news-detail">
 	<?if($arParams["DISPLAY_PICTURE"]!="N" && is_array($arResult["DETAIL_PICTURE"])):?>
@@ -60,15 +62,27 @@ $this->setFrameMode(true);
 		?><br />
 	<?endforeach;
 	foreach($arResult["DISPLAY_PROPERTIES"] as $pid=>$arProperty):?>
-
 		<?=$arProperty["NAME"]?>:&nbsp;
-		<?if(is_array($arProperty["DISPLAY_VALUE"])):?>
-			<?=implode("&nbsp;/&nbsp;", $arProperty["DISPLAY_VALUE"]);?>
+		<?if(is_array($arProperty["DISPLAY_VALUE"])):
+			if ($pid == 'TAGS') {
+				foreach ($arProperty["DISPLAY_VALUE"] as $tag) {
+					echo "#" . $tag . "&nbsp;&nbsp;";
+				}
+			} else {
+				echo implode("&nbsp;/&nbsp;", $arProperty["DISPLAY_VALUE"]);
+			}?>
 		<?else:?>
 			<?=$arProperty["DISPLAY_VALUE"];?>
 		<?endif?>
 		<br />
-	<?endforeach;
+	<?endforeach;?>
+
+	<?$arProperty = $arResult["PROPERTIES"]['TAGS']?>
+	<?=$arProperty["NAME"]?>:&nbsp;
+	<?=implode("&nbsp;/&nbsp;#", $arProperty["DISPLAY_VALUE"]);?>
+	<br />
+	<?
+
 	if(array_key_exists("USE_SHARE", $arParams) && $arParams["USE_SHARE"] == "Y")
 	{
 		?>

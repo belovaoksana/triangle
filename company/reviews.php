@@ -5,7 +5,7 @@ $APPLICATION->SetTitle("Отзывы наших клиентов");?>
 <div class="container">
     <?$APPLICATION->IncludeComponent(
     	"bitrix:news",
-    	"reviews",
+    	"reviews1",
     	Array(
     		"ADD_ELEMENT_CHAIN" => "N",
     		"ADD_SECTIONS_CHAIN" => "Y",
@@ -27,10 +27,10 @@ $APPLICATION->SetTitle("Отзывы наших клиентов");?>
     		"DETAIL_PAGER_SHOW_ALL" => "Y",
     		"DETAIL_PAGER_TEMPLATE" => "",
     		"DETAIL_PAGER_TITLE" => "Страница",
-    		"DETAIL_PROPERTY_CODE" => array("DATE","TITLE",""),
+    		"DETAIL_PROPERTY_CODE" => array("DATE","TITLE","AUTHOR"),
     		"DETAIL_SET_CANONICAL_URL" => "N",
     		"DISPLAY_BOTTOM_PAGER" => "Y",
-    		"DISPLAY_NAME" => "Y",
+    		"DISPLAY_NAME" => "N",
     		"DISPLAY_TOP_PAGER" => "N",
     		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
     		"IBLOCK_ID" => "5",
