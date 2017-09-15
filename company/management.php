@@ -4,8 +4,8 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Наша команда");
 ?>
 <?$APPLICATION->IncludeComponent(
-	"bitrix:catalog.element",
-	"sotrudniki",
+	"bitrix:catalog",
+	"",
 	Array(
 		"ACTION_VARIABLE" => "action",
 		"ADD_ELEMENT_CHAIN" => "N",
@@ -49,7 +49,7 @@ $APPLICATION->SetTitle("Наша команда");
 		"LIST_BROWSER_TITLE" => "-",
 		"LIST_META_DESCRIPTION" => "-",
 		"LIST_META_KEYWORDS" => "-",
-		"LIST_PROPERTY_CODE" => array("15",""),
+		"LIST_PROPERTY_CODE" => array("",""),
 		"MESSAGE_404" => "",
 		"PAGER_BASE_LINK_ENABLE" => "N",
 		"PAGER_DESC_NUMBERING" => "N",
@@ -86,7 +86,7 @@ $APPLICATION->SetTitle("Наша команда");
 		"TOP_ELEMENT_SORT_ORDER" => "asc",
 		"TOP_ELEMENT_SORT_ORDER2" => "desc",
 		"TOP_LINE_ELEMENT_COUNT" => "3",
-		"TOP_PROPERTY_CODE" => array("15",""),
+		"TOP_PROPERTY_CODE" => array("",""),
 		"USE_COMPARE" => "N",
 		"USE_ELEMENT_COUNTER" => "Y",
 		"USE_FILTER" => "N",

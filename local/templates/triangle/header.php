@@ -20,6 +20,7 @@
 
 </head>
 <body>
+<div>
 	<header id="header">
         <?$APPLICATION->IncludeComponent(
 	"bitrix:main.include",
@@ -78,6 +79,7 @@
             </div>
        </div>
     </header>
+</div>
 </body>
 <div id="workarea">
     <div class="container">
