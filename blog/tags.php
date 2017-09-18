@@ -3,6 +3,8 @@
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Блог");
 $GLOBALS['filter_tag'] = ['PROPERTY_TAGS' =>$_GET['TAG']];
+pre( $GLOBALS['filter_tag']);
+echo "1";
 ?>
 <div class="container">
     <?$APPLICATION->IncludeComponent("bitrix:news.list","",Array(
@@ -18,6 +20,7 @@ $GLOBALS['filter_tag'] = ['PROPERTY_TAGS' =>$_GET['TAG']];
         "SORT_ORDER1" => "DESC",
         "SORT_BY2" => "SORT",
         "SORT_ORDER2" => "ASC",
+        "USE_FILTER" => "Y",
         "FILTER_NAME" => "filter_tag",
         "FIELD_CODE" => Array("ID"),
         "PROPERTY_CODE" => Array("DESCRIPTION"),
@@ -40,8 +43,8 @@ $GLOBALS['filter_tag'] = ['PROPERTY_TAGS' =>$_GET['TAG']];
         "CACHE_TIME" => "3600",
         "CACHE_FILTER" => "Y",
         "CACHE_GROUPS" => "Y",
-        "DISPLAY_TOP_PAGER" => "Y",
-        "DISPLAY_BOTTOM_PAGER" => "Y",
+        "DISPLAY_TOP_PAGER" => "N",
+        "DISPLAY_BOTTOM_PAGER" => "N",
         "PAGER_TITLE" => "Новости",
         "PAGER_SHOW_ALWAYS" => "Y",
         "PAGER_TEMPLATE" => "",

@@ -1156,12 +1156,12 @@ ul.elements li > i{
   padding-bottom: 90px;
 }
 
-.pagination li{
+.pagination {
   display: inline-block;
   margin: 0 10px;
 }
 
-.pagination li a{
+.pagination a{
   color: #000;
   padding: 5px 10px;
   border-radius: 5px;

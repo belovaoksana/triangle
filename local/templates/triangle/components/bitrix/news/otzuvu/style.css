@@ -1,0 +1,17 @@
+.nav-list
+{
+    margin-bottom: 15px;
+}
+.nav-list-item
+{
+    margin-right: 10px;
+}
+.nav-list-item:last-child
+{
+    margin-right: 0;
+}
+.nav-list-item.active
+{
+    font-weight: bold;
+    color: blue;
+}
