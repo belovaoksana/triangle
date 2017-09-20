@@ -58,16 +58,7 @@ pre($arResult["ITEMS"]);
 			<?$x=($arProperty["VALUE"][0])?>
 			<?$text=$arProperty[LINK_ELEMENT_VALUE][$x][PROPERTY_WORKER_DETAIL_TEXT];?>
 			<a onClick="getElementById('win').removeAttribute('style');" type="button"><?=$arProperty[LINK_ELEMENT_VALUE][$x][NAME];?></a>
-			<div id="win" style="display:none;">
-			   <div class="overlay"></div>
-			      <div class="visible">
-			        <h3>Заголовок окна</h3>
-			          <div class="content">
-			            <p>Содержание</p>
-			          </div>
-					  <button type="button" onClick="getElementById('win').style.display='none';">Закрыть</button>
-			    </div>
-			</div>
+			
 			<?endif?><br/>
 		<?endforeach;?>
 	</p>

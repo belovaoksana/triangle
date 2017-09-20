@@ -10,3 +10,9 @@ div.news-list img.preview_picture
 .news-date-time {
 	color:#486DAA;
 }
+.bx-core-adm-dialog-content-wrap-inner img {
+	float: left;
+	margin-right:10px;
+	width:115px;
+	height:150px;
+}
