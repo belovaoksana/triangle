@@ -3,8 +3,7 @@
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Блог");
 ?>
-<div class="container">
-    <?$APPLICATION->IncludeComponent(
+<?$APPLICATION->IncludeComponent(
 	"bitrix:news",
 	"blog",
 	Array(
@@ -52,6 +51,7 @@ $APPLICATION->SetTitle("Блог");
 		"META_DESCRIPTION" => "-",
 		"META_KEYWORDS" => "-",
 		"NEWS_COUNT" => "20",
+		"NOT_FOUND_PICTURE" => "/local/templates/triangle/images/image_not_found.png",
 		"PAGER_BASE_LINK_ENABLE" => "N",
 		"PAGER_DESC_NUMBERING" => "N",
 		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",

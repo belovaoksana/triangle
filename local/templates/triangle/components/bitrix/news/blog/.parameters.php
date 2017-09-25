@@ -94,5 +94,13 @@ $arTemplateParameters["LIST_DETAIL_PICT_W"] = array(
 	"TYPE" => "STRING",
 	"DEFAULT" => "550",
 );
-
+$arTemplateParameters["NOT_FOUND_PICTURE"] = array(
+   "NAME" => GetMessage("NOT_FOUND_PICTURE"),
+   "TYPE" => "FILE",
+   "FD_TARGET" => "F",
+   "FD_EXT" => 'jpg,jpeg,gif,png',
+   "FD_UPLOAD" => true,
+   "FD_USE_MEDIALIB" => true,
+   "FD_MEDIALIB_TYPES" => Array('image')
+);
 ?>

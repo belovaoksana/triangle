@@ -21,7 +21,11 @@ $this->setFrameMode(true);
 				<a
 					data-text="<h4>Биография сотрудника</h4> <br> <?=$employees["DETAIL_TEXT"]?>"
 					data-name="<?=$employees["NAME"]?>"
-					data-img="<?=CFile::GetPath( $employees['PREVIEW_PICTURE'])?>"
+					<?if (!empty($employees['PREVIEW_PICTURE'])):?>
+						data-img="<?=CFile::GetPath( $employees['PREVIEW_PICTURE'])?>"
+					<?else:?>
+						data-img=<?=$arResult["NOT_FOUND_PHOTO"]?>
+					<?endif;?>
 					onclick ="modal(this);">Подробнее</a><br><?
 			}
 		 } else {

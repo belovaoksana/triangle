@@ -8,4 +8,9 @@ $MESS["T_IBLOCK_DESC_NEWS_SHARE_TEMPLATE"] = "Шаблон компонента 
 $MESS["T_IBLOCK_DESC_NEWS_SHARE_SYSTEM"] = "Используемые соц. закладки и сети";
 $MESS["T_IBLOCK_DESC_NEWS_SHARE_SHORTEN_URL_LOGIN"] = "Логин для bit.ly";
 $MESS["T_IBLOCK_DESC_NEWS_SHARE_SHORTEN_URL_KEY"] = "Ключ для для bit.ly";
+$MESS["LIST_PREVIEW_PICT_H"] = "Высота уменьшенного изображения для анонса";
+$MESS["LIST_PREVIEW_PICT_W"] = "Ширина уменьшенного изображения для анонса ";
+$MESS["LIST_DETAIL_PICT_H"] = "Высота уменьшенного изображения для подробной информации";
+$MESS["LIST_DETAIL_PICT_W"] = "Ширина уменьшенного изображения для подробной информации";
+$MESS["NOT_FOUND_PICTURE"] = "Выберите файл для изображения - заглушки"
 ?>

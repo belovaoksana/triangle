@@ -66,7 +66,8 @@ $this->setFrameMode(true);
 		"ADD_ELEMENT_CHAIN" => (isset($arParams["ADD_ELEMENT_CHAIN"]) ? $arParams["ADD_ELEMENT_CHAIN"] : ''),
 		'STRICT_SECTION_CHECK' => (isset($arParams['STRICT_SECTION_CHECK']) ? $arParams['STRICT_SECTION_CHECK'] : ''),
 		"LIST_DETAIL_PICT_H" => $arParams["LIST_DETAIL_PICT_H"],
-		"LIST_DETAIL_PICT_W" => $arParams["LIST_DETAIL_PICT_W"]
+		"LIST_DETAIL_PICT_W" => $arParams["LIST_DETAIL_PICT_W"],
+		"NOT_FOUND_PICTURE" => $arParams["NOT_FOUND_PICTURE"]
 	),
 	$component
 );?>

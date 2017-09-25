@@ -42,5 +42,7 @@ if ($this->StartResultCache(false, ($arParams["CACHE_GROUPS"]==="N"? false: $USE
 		$arResult["DEPARTMENTS"][$department["ID"]]["NAME"] = $department["NAME"];
 	}
 
+	$arResult["NOT_FOUND_PHOTO"] = $arParams["NOT_FOUND_PICTURE"];
+
 	$this->IncludeComponentTemplate();
 }

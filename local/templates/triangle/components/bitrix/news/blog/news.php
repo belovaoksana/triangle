@@ -104,7 +104,8 @@ $this->setFrameMode(true);
 		"HIDE_LINK_WHEN_NO_DETAIL" => $arParams["HIDE_LINK_WHEN_NO_DETAIL"],
 		"CHECK_DATES" => $arParams["CHECK_DATES"],
 		"LIST_PREVIEW_PICT_H" => $arParams["LIST_PREVIEW_PICT_H"],
-		"LIST_PREVIEW_PICT_W" => $arParams["LIST_PREVIEW_PICT_W"]
+		"LIST_PREVIEW_PICT_W" => $arParams["LIST_PREVIEW_PICT_W"],
+		"NOT_FOUND_PICTURE" => $arParams["NOT_FOUND_PICTURE"]
 
 	),
 	$component

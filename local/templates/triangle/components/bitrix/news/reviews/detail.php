@@ -67,6 +67,7 @@ $this->setFrameMode(true);
 		'STRICT_SECTION_CHECK' => (isset($arParams['STRICT_SECTION_CHECK']) ? $arParams['STRICT_SECTION_CHECK'] : ''),
 		"LIST_DETAIL_PICT_H" => $arParams["LIST_DETAIL_PICT_H"],
 		"LIST_DETAIL_PICT_W" => $arParams["LIST_DETAIL_PICT_W"],
+		"NOT_FOUND_PICTURE" => $arParams["NOT_FOUND_PICTURE"]
 	),
 	$component
 );?>
