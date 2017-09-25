@@ -31,7 +31,7 @@ endforeach?>
 
 <script>
 function modal (el) {
-var text = '<img src="' + el.dataset.img + '">';
+var text = '<img src="' + el.dataset.img + '" width = "<?=$arParams["LIST_PREVIEW_PICT_W"]?>" height = "<?=$arParams["LIST_PREVIEW_PICT_H"]?>">';
 text += el.dataset.text;
 var popup = new BX.CDialog({
 'title': el.dataset.name,

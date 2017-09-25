@@ -1,4 +1,4 @@
-<?
+<?php
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
 
 if(!CModule::IncludeModule("iblock"))
@@ -21,14 +21,14 @@ $arComponentParameters = array(
 		"IBLOCK_TYPE" => array(
 			"PARENT" => "BASE",
 			"NAME" => GetMessage("IBLOCK_TYPE"),
-			"TYPE" => "STRING",
+			"TYPE" => "LIST",
 			"VALUES" => $arIBlockType,
 			"REFRESH" => "Y",
 		),
 		"IBLOCK_ID" => array(
 			"PARENT" => "BASE",
 			"NAME" => GetMessage("IBLOCK_IBLOCK"),
-			"TYPE" => "STRING",
+			"TYPE" => "LIST",
 			"VALUES" => $arIBlock,
 			"MULTIPLE"=>"Y",
 			"REFRESH" => "Y",
@@ -39,12 +39,15 @@ $arComponentParameters = array(
 			"TYPE" => "STRING",
 			"DEFAULT" => '',
 		),
-		"DETAIL_URL" => CIBlockParameters::GetPathTemplateParam(
-			"DETAIL",
-			"DETAIL_URL",
-			GetMessage("IBLOCK_DETAIL_URL"),
-			"",
-			"URL_TEMPLATES"
+		"LIST_PREVIEW_PICT_H" => array(
+			"NAME" => GetMessage("LIST_PREVIEW_PICT_H"),
+			"TYPE" => "STRING",
+			"DEFAULT" => "150",
+		),
+		"LIST_PREVIEW_PICT_W" => array(
+			"NAME" => GetMessage("LIST_PREVIEW_PICT_W"),
+			"TYPE" => "STRING",
+			"DEFAULT" => "250",
 		),
 		"CACHE_TIME"  =>  Array("DEFAULT"=>180),
 		"CACHE_GROUPS" => array(

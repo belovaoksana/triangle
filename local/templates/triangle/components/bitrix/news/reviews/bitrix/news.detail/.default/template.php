@@ -14,13 +14,14 @@ $this->setFrameMode(true);
 ?>
 <div class="news-detail">
 	<?if($arParams["DISPLAY_PICTURE"]!="N" && is_array($arResult["DETAIL_PICTURE"])):?>
-		<img
+		<div><img
 			class="detail_picture"
 			border="0"
 			src="<?=$arResult["DETAIL_PICTURE"]["src"]?>"
 			width="<?=$arResult["DETAIL_PICTURE"]["width"]?>"
 			height="<?=$arResult["DETAIL_PICTURE"]["height"]?>"
 			/>
+		</div>
 	<?endif?>
 	<?if($arParams["DISPLAY_DATE"]!="N" && $arResult["DISPLAY_ACTIVE_FROM"]):?>
 		<span class="news-date-time"><?=$arResult["DISPLAY_ACTIVE_FROM"]?></span>
@@ -36,7 +37,7 @@ $this->setFrameMode(true);
 		<?echo $arResult["NAV_TEXT"];?>
 		<?if($arParams["DISPLAY_BOTTOM_PAGER"]):?><br /><?=$arResult["NAV_STRING"]?><?endif;?>
 	<?elseif(strlen($arResult["DETAIL_TEXT"])>0):?>
-		<?echo $arResult["DETAIL_TEXT"];?>
+		<div><?echo $arResult["DETAIL_TEXT"];?></div>
 	<?else:?>
 		<?echo $arResult["PREVIEW_TEXT"];?>
 	<?endif?>

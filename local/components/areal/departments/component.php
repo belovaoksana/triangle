@@ -1,4 +1,4 @@
-<?
+<?php
 if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
 /** @var CBitrixComponent $this */
 /** @var array $arParams */
@@ -32,7 +32,6 @@ if ($this->StartResultCache(false, ($arParams["CACHE_GROUPS"]==="N"? false: $USE
 	    $arResult["DEPARTMENTS"][$employees["IBLOCK_SECTION_ID"]]["EMPLOYEES"][] = $employees;
 		$ids[$employees["IBLOCK_SECTION_ID"]] = 1;
 	}
-
 	$res_dep = CIBlockSection::GetList(
 		false,
 		["IBLOCK_ID" => $arParams["IBLOCK_ID"], "ID" => array_keys($ids)],

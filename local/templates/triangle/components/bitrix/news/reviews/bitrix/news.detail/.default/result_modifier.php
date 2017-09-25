@@ -1,5 +1,7 @@
-<?
-if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
+<?php
+if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) {
+    die();
+}
     if (!empty($arResult["DETAIL_PICTURE"])) {
         $arImage = CFile::ResizeImageGet(
             $arResult["DETAIL_PICTURE"],
@@ -7,5 +9,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
             true
         );
     $arResult["DETAIL_PICTURE"] = $arImage;
+    } else {
+        $arImage = ["src" => "/local/templates/triangle/images/image_detail.png", "width" => 350, 'height'=> 250, "size" => 26300];
+        $arResult["DETAIL_PICTURE"] = $arImage;
     }
-?>
