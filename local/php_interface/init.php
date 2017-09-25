@@ -1,4 +1,4 @@
-<?
+<?php
 function pre($var, $title = '')
 {
     if (php_sapi_name() != "cli") {
