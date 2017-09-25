@@ -10,7 +10,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                        <p>Успешное развитие бизнеса &ndash; во многом результат квалифицированной работы руководства. 							<b>&laquo;Мебельная компания&raquo;</b> на мебельном рынке уже 18 лет. За это время Компания 							не только сохранила, но и упрочила лидирующие позиции среди ведущих игроков мебельного рынка.</p>
                        <p><b>&laquo;Мебельная компания&raquo;</b> из года в год расширяет ассортимент выпускаемой продукции, 							наращивает темпы и объемы производства, увеличивает производственные и складские 							площади, развивает отношения с партнерами со всех регионов страны и налаживает связи с зарубежными партнерами.
                        В большой степени это заслуга хорошо подготовленного руководящего состава и его грамотной политики.</p>
-                       <a href="http://triangle.dev/services/index.php" class="btn btn-common">Услуги</a>
+                       <a href="/services/" class="btn btn-common">Услуги</a>
                    </div>
                     <img src="/local/templates/triangle/images/home/slider/hill.png" class="slider-hill" alt="slider image">
                    <img src="/local/templates/triangle/images/home/slider/house.png" class="slider-house" alt="slider image">
@@ -22,7 +22,6 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
        </div>
        <div class="preloader"><i class="fa fa-sun-o fa-spin"></i></div>
    </section>
-
    <div class="rev_list">
        <h3>Отзывы наших клиентов</h3>
        <?$APPLICATION->IncludeComponent(
@@ -82,7 +81,8 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
    		"STRICT_SECTION_CHECK" => "N"
    	)
    );?>
-   <a href="http://triangle.dev/company/reviews.php">Смотреть все отзывы</a>
+
+   <a href="/company/reviews.php">Смотреть все отзывы</a>
 </div>
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

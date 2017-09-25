@@ -13,9 +13,7 @@
 $this->setFrameMode(true);
 ?>
 <div class="news-list">
-<?if($arParams["DISPLAY_TOP_PAGER"]):?>
-	<?=$arResult["NAV_STRING"]?><br />
-<?endif;?>
+
 <?foreach($arResult["ITEMS"] as $arItem):?>
 	<?
 	$this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
@@ -23,19 +21,14 @@ $this->setFrameMode(true);
 	?>
 	<p class="news-item" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
 		<?if($arParams["DISPLAY_PICTURE"]!="N" && is_array($arItem["PREVIEW_PICTURE"])):?>
-			<?if(!$arParams["HIDE_LINK_WHEN_NO_DETAIL"] || ($arItem["DETAIL_TEXT"] && $arResult["USER_HAVE_ACCESS"])):?>
-			<?
-			$file = CFile::ResizeImageGet($arItem["PREVIEW_PICTURE"], array('width'=>150, 'height'=>150), BX_RESIZE_IMAGE_PROPORTIONAL, true);
-			$img = '<img src="'.$file['src'].'" width="'.$file['width'].'" height="'.$file['height'].'" />';
-			?>
-			<a href="<?=$arItem["DETAIL_PAGE_URL"]?>"><?=$img?></a>
-			<?else:?>
-			<?
-			$file = CFile::ResizeImageGet($arItem["PREVIEW_PICTURE"], array('width'=>150, 'height'=>150), BX_RESIZE_IMAGE_PROPORTIONAL, true);
-			$img = '<img src="'.$file['src'].'" width="'.$file['width'].'" height="'.$file['height'].'" />';
-			?>
-			<a href="<?=$arItem["DETAIL_PAGE_URL"]?>"><?=$img?></a>
-			<?endif;?>
+				<a href="<?=$arItem["DETAIL_PAGE_URL"]?>"><img
+						class="preview_picture"
+						border="0"
+						src="<?=$arItem["PREVIEW_PICTURE"]["src"]?>"
+						width="<?=$arItem["PREVIEW_PICTURE"]["width"]?>"
+						height="<?=$arItem["PREVIEW_PICTURE"]["height"]?>"
+						style="float:left"
+						/></a>
 		<?endif?>
 		<?if($arParams["DISPLAY_DATE"]!="N" && $arItem["DISPLAY_ACTIVE_FROM"]):?>
 			<span class="news-date-time"><?echo $arItem["DISPLAY_ACTIVE_FROM"]?></span>
@@ -47,12 +40,6 @@ $this->setFrameMode(true);
 				<b><?echo $arItem["NAME"]?></b><br />
 			<?endif;?>
 		<?endif;?>
-		<?if($arParams["DISPLAY_PREVIEW_TEXT"]!="N" && $arItem["PREVIEW_TEXT"]):?>
-			<?echo $arItem["PREVIEW_TEXT"];?>
-		<?endif;?>
-		<?if($arParams["DISPLAY_PICTURE"]!="N" && is_array($arItem["PREVIEW_PICTURE"])):?>
-			<div style="clear:both"></div>
-		<?endif?>
 		<?foreach($arItem["FIELDS"] as $code=>$value):?>
 			<small>
 			<?=GetMessage("IBLOCK_FIELD_".$code)?>:&nbsp;<?=$value;?>
@@ -61,12 +48,12 @@ $this->setFrameMode(true);
 		<?foreach($arItem["DISPLAY_PROPERTIES"] as $pid=>$arProperty):?>
 			<small>
 			<?=$arProperty["NAME"]?>:&nbsp;
-			<?if(is_array($arProperty["DISPLAY_VALUE"])):?>
-				<?=implode("&nbsp;/&nbsp;", $arProperty["DISPLAY_VALUE"]);?>
-			<?else:?>
-				<?=$arProperty["DISPLAY_VALUE"];?>
-			<?endif?>
-			</small><br />
+			<?if(is_array($arProperty["DISPLAY_VALUE"])) {
+				echo implode("&nbsp;/&nbsp;", $arProperty["DISPLAY_VALUE"]);
+			} else {
+				echo $arProperty["DISPLAY_VALUE"];
+			}?>
+			</small><br/>
 		<?endforeach;?>
 	</p>
 <?endforeach;?>

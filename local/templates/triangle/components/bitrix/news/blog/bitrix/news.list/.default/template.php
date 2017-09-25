@@ -23,19 +23,14 @@ $this->setFrameMode(true);
 	?>
 	<p class="news-item" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
 		<?if($arParams["DISPLAY_PICTURE"]!="N" && is_array($arItem["PREVIEW_PICTURE"])):?>
-			<?if(!$arParams["HIDE_LINK_WHEN_NO_DETAIL"] || ($arItem["DETAIL_TEXT"] && $arResult["USER_HAVE_ACCESS"])):?>
-			<?
-			$file = CFile::ResizeImageGet($arItem["PREVIEW_PICTURE"], array('width'=>150, 'height'=>150), BX_RESIZE_IMAGE_PROPORTIONAL, true);
-			$img = '<img src="'.$file['src'].'" width="'.$file['width'].'" height="'.$file['height'].'" />';
-			?>
-			<a href="<?=$arItem["DETAIL_PAGE_URL"]?>"><?=$img?></a>
-			<?else:?>
-			<?
-			$file = CFile::ResizeImageGet($arItem["PREVIEW_PICTURE"], array('width'=>150, 'height'=>150), BX_RESIZE_IMAGE_PROPORTIONAL, true);
-			$img = '<img src="'.$file['src'].'" width="'.$file['width'].'" height="'.$file['height'].'" />';
-			?>
-			<a href="<?=$arItem["DETAIL_PAGE_URL"]?>"><?=$img?></a>
-			<?endif;?>
+				<a href="<?=$arItem["DETAIL_PAGE_URL"]?>"><img
+						class="preview_picture"
+						border="0"
+						src="<?=$arItem["PREVIEW_PICTURE"]["src"]?>"
+						width="<?=$arItem["PREVIEW_PICTURE"]["width"]?>"
+						height="<?=$arItem["PREVIEW_PICTURE"]["height"]?>"
+						style="float:left"
+						/></a>
 		<?endif?>
 		<?if($arParams["DISPLAY_DATE"]!="N" && $arItem["DISPLAY_ACTIVE_FROM"]):?>
 			<span class="news-date-time"><?echo $arItem["DISPLAY_ACTIVE_FROM"]?></span>

@@ -15,19 +15,19 @@ $this->setFrameMode(true);
 ?>
 <?foreach($arResult["DEPARTMENTS"] as $department):?>
 	<div><h3><?=$department["NAME"]?></h3></div>
-		<?if (isset($department["EMPLOYEES"])):?>
-			<?foreach($department["EMPLOYEES"] as $employees):?>
-				<?=$employees["NAME"]?>&nbsp;
-					<a
-						data-text="<h4>Биография сотрудника</h4> <br> <?=$employees["DETAIL_TEXT"]?>"
-						data-name="<?=$employees["NAME"]?>"
-						data-img="<?=CFile::GetPath( $employees['PREVIEW_PICTURE'])?>"
-						onclick ="modal(this);"
-					>Подробнее</a><br>
-			<?endforeach?>
-		<?else : echo "В настоящее время в данном отделе нет сотрудников";?>
-		<?endif?>
-<?endforeach?>
+		<?if (isset($department["EMPLOYEES"])) {
+			foreach($department["EMPLOYEES"] as $employees) {
+				echo $employees["NAME"]?>&nbsp;
+				<a
+					data-text="<h4>Биография сотрудника</h4> <br> <?=$employees["DETAIL_TEXT"]?>"
+					data-name="<?=$employees["NAME"]?>"
+					data-img="<?=CFile::GetPath( $employees['PREVIEW_PICTURE'])?>"
+					onclick ="modal(this);">Подробнее</a><br><?
+			}
+		 } else {
+			echo "В настоящее время в данном отделе нет сотрудников";
+		   }
+endforeach?>
 
 <script>
 function modal (el) {
